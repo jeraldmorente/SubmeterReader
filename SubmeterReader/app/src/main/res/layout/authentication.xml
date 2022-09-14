@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/splashBG"
+    tools:context=".Authentication">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="50dp">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="90dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/applogo" />
+
+            <Button
+                android:id="@+id/authbutton"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/authStat"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/roundedbutton"
+                android:fontFamily="@font/prototype"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:drawableLeft="@drawable/ic_fingerprint"
+                android:text="Authenticate"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/authStat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="60dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:gravity="center"
+                android:text="Click button to authenticate"
+                android:textAlignment="center"
+                android:textColor="@color/blue01"
+                android:textSize="15sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </RelativeLayout>
+</RelativeLayout>

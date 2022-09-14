@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingTop="30dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="50dp"
+        tools:context=".MainMenu">
+
+        <TextView
+            android:id="@+id/contacts_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:text="Contact Number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/previous_date" />
+
+        <EditText
+            android:id="@+id/contact_field"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/roundedtextview"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:inputType="phone"
+            android:paddingLeft="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/pickcontact"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contacts_field" />
+
+        <Button
+            android:id="@+id/pickcontact"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:background="@drawable/roundedbutton"
+            android:drawableRight="@drawable/ic_contact"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Contact"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/contact_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/contact_field" />
+
+
+        <TextView
+            android:id="@+id/label01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Bill Type:"
+            app:layout_constraintBottom_toBottomOf="@+id/bill_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/bill_type" />
+
+
+        <Spinner
+            android:id="@+id/bill_type"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="@font/poppinsmedium"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/label01"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/label02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Billing Period:"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bill_type" />
+
+        <Button
+            android:id="@+id/previous_date"
+            style="?android:spinnerStyle"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:onClick="setPreviousDate"
+            android:text="JAN 01 2022"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/label02"
+            app:layout_constraintWidth_percent=".45" />
+
+        <Button
+            android:id="@+id/present_date"
+            style="?android:spinnerStyle"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:onClick="setPresentDate"
+            android:text="JAN 01 2022"
+            app:layout_constraintBottom_toBottomOf="@+id/previous_date"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/previous_date"
+            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintWidth_percent=".45" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Previous Rdg."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contact_field" />
+
+        <TextView
+            android:id="@+id/labelPresent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Present Rdg."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/presentrdg_field"
+            app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+        <EditText
+            android:id="@+id/previousrdg_field"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/roundedtextview"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingTop="7dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".48" />
+
+        <EditText
+            android:id="@+id/presentrdg_field"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:background="@drawable/roundedtextview"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:paddingLeft="5dp"
+            android:paddingTop="7dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="7dp"
+            app:layout_constraintBottom_toBottomOf="@+id/previousrdg_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/previousrdg_field"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".48" />
+
+        <TextView
+            android:id="@+id/bill_times"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Per Cubic Meter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@+id/previousrdg_field"
+            app:layout_constraintTop_toBottomOf="@+id/previousrdg_field" />
+
+        <TextView
+            android:id="@+id/label_cons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Consumption"
+            app:layout_constraintBottom_toBottomOf="@+id/bill_times"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/presentrdg_field"
+            app:layout_constraintTop_toBottomOf="@+id/previousrdg_field"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/cosumption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="00"
+            app:layout_constraintBottom_toBottomOf="@+id/billing_times"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/label_cons"
+            app:layout_constraintTop_toBottomOf="@+id/bill_times" />
+
+        <EditText
+            android:id="@+id/billing_times"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/roundedtextview"
+            android:fontFamily="@font/poppinsmedium"
+            android:gravity="center"
+            android:inputType="number"
+            android:paddingLeft="5dp"
+            android:paddingTop="7dp"
+            android:paddingRight="5dp"
+            android:paddingBottom="7dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bill_times"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".48" />
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="0dp"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent=".8"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/roundedbutton"
+            android:fontFamily="@font/poppinsmedium"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="CALCULATE"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/billing_times" />
+
+        <TextView
+            android:id="@+id/totalbill_label"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="Total Amount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calculate" />
+
+        <TextView
+            android:id="@+id/billpayment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="₱ 000.00"
+            android:textSize="40dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totalbill_label" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="Due Date:"
+            app:layout_constraintBottom_toBottomOf="@+id/datePickerButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/datePickerButton" />
+
+        <Button
+            android:id="@+id/datePickerButton"
+            style="?android:spinnerStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppinsmedium"
+            android:onClick="openDatePicker"
+            android:text="JAN 01 2022"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/billpayment" />
+
+        <Button
+            android:id="@+id/send_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/roundedbutton"
+            android:fontFamily="@font/poppinsmedium"
+            android:text="SEND sMS"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/datePickerButton" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

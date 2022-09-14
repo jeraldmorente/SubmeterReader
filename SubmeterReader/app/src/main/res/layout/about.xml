@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".About">
+
+    <RelativeLayout
+        android:id="@+id/layer01"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/toplayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="17dp"
+            android:fontFamily="@font/prototype"
+            android:text="ABOUT"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_below="@+id/layer01">
+
+        <RelativeLayout
+            android:layout_below="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="50dp">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/applogo" />
+
+            <TextView
+                android:id="@+id/textlogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/prototype"
+                android:gravity="center"
+                android:text="SUBMETER Bill Generator"
+                android:textAlignment="center"
+                android:textColor="@color/blue01"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textlogo"
+                android:layout_alignStart="@+id/textlogo"
+                android:layout_alignLeft="@+id/imageView"
+                android:layout_alignEnd="@+id/textlogo"
+                android:layout_alignRight="@+id/textlogo"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:fontFamily="@font/poppinsmedium"
+                android:justificationMode="inter_word"
+                android:text=" This android application is ideal for business apartments which   are  using electricity or water sub meter.
+"
+
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/about"
+                android:layout_alignStart="@+id/about"
+                android:layout_alignLeft="@+id/about"
+                android:layout_alignEnd="@+id/about"
+                android:layout_alignRight="@+id/about"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="0dp"
+                android:layout_marginRight="0dp"
+                android:fontFamily="@font/poppinsmedium"
+
+                android:justificationMode="inter_word"
+                android:text=" Sub Meter Bill Generator is an app that will calculate sub meter's total consumption. It can generate a sub meter bill summary and send it to the tenant through text message.
+"
+                android:textSize="18sp" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

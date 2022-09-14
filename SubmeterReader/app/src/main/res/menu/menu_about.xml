@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:context=".MainActivity">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/bckup"
+            android:icon="@drawable/applogo"
+            android:orderInCategory="1"
+            android:title="File Records" />
+
+        <item
+            android:id="@+id/abt"
+            android:icon="@drawable/applogo"
+            android:orderInCategory="2"
+            android:title="About" />
+
+    </group>
+</menu>
